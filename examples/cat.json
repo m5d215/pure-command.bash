@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Display stdin",
+    "command": "cat",
+    "stdin": ["Hello", "World!"],
+    "stdout": ["Hello", "World!"]
+  },
+  {
+    "description": "stdin no final newline",
+    "command": "cat",
+    "stdin": ["Hello", "World!"],
+    "stdin_final_newline": false,
+    "stdout": ["Hello", "World!"],
+    "stdout_final_newline": false
+  },
+  {
+    "description": "Preserve the final newline",
+    "command": "cat",
+    "stdin": ["Hello", "World!", "", ""],
+    "stdout": ["Hello", "World!", "", ""]
+  }
+]

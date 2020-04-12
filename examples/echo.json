@@ -1,0 +1,30 @@
+[
+  {
+    "description": "Simple echo command",
+    "command": "echo Hello World!",
+    "stdout": ["Hello World!"]
+  },
+  {
+    "description": "Suppress final newline",
+    "command": "echo -n Hello World!",
+    "stdout": ["Hello World!"],
+    "stdout_final_newline": false
+  },
+  {
+    "description": "Preserve the final newline",
+    "command": "echo \"!\n\"",
+    "stdout": ["!", ""]
+  },
+  {
+    "description": "Complex echo",
+    "command": "echo -n \"Hello\" \"World\n!\n\n\"",
+    "stdout": ["Hello World", "!", "", ""],
+    "stdout_final_newline": false
+  },
+  {
+    "description": "Redirect to stderr",
+    "command": "echo -n \"Hello\" \"World\n!\n\n\" >&2",
+    "stderr": ["Hello World", "!", "", ""],
+    "stderr_final_newline": false
+  }
+]
